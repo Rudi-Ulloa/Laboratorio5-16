@@ -1,8 +1,11 @@
 sap.ui.define([
-	"sap/m/Text"
+		"sap/ui/core/mvc/XMLView"
 	],
-function (Text) {
-	new Text({
-		text: "Hola Mundo"
-	}).placeAt("content");
-});
+	function (XMLView) {
+		XMLView.create({
+			viewName: "ProyectoN1.Customers.view.App"
+		}).then(function (oView) {
+			oView.placeAt("content");
+		});
+
+	});	
